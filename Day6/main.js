@@ -109,13 +109,37 @@ for (let g = 0; g <= 100; g++) {
 }
 
 
-let rando = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
-console.log(rando);
+const arr = [];
+for (i = 0; arr.length < 5; i++) {
+    let randNum = Math.round(Math.random() * 10);
+    if(arr.includes(randNum) == true){
+        continue
+    }
+    arr.push(randNum)
+}
+// console.log(arr);
 
-let ran = Math.random() * 255;
-let rand = Math.random() * 255;
-let ra = Math.random() * 255;
-console.log(`rgb(${Math.round(ran)},${Math.round(rand)},${Math.round(ra)})`);
+let string = "";
+for (i = 0; i < 6; i++) {
+    const charList = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let randString = Math.floor(Math.random() * charList.length)
+    string += charList[randString]
+}
+console.log(string);
+
+let newString = '#';
+for (i = 0; i < 6; i++) {
+    const charList = "abcdef0123456789";
+    let randString = Math.floor(Math.random() * charList.length)
+    newString += charList[randString]
+}
+console.log(newString);
+
+
+// let ran = Math.random() * 255;
+// let rand = Math.random() * 255;
+// let ra = Math.random() * 255;
+// console.log(`rgb(${Math.round(ran)},${Math.round(rand)},${Math.round(ra)})`);
 
 
 let newCount = [];
